@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Angadi Institue Of Technology And Management|{% block title %}{% endblock title %}</title>
+    <link rel="shortcut icon" href="static/fav-icon.jpg" type="image/x-icon">
+
+    {% comment %} adding css link to make my web page more docorative {% endcomment %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+
+   {% comment %} here i am defininig my header which helps to connect same header in my all page {% endcomment %}
+    <nav class="navbar navbar-expand-lg bg-secondary navbar-dark">
+        <div class="container-fluid">
+            {% comment %} <a class="navbar-brand" href="#">Navbar</a> {% endcomment %}
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                   <img  width="48" src="static/aitm.png" alt="college logo">
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/acm">Acm Aitm Chapter</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/achivements">Achievements</a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact Us</a>
+                  </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+      </nav>
+ 
+      {% comment %} by using block body i can add other things in my page other than my base.html {% endcomment %}
+      {% block body %}{% endblock body %}
+
+    {% comment %} here i added my footer which helps to add in my all pages {% endcomment %}
+      <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" previewlistener="true">
+              <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+            <span class="mb-3 mb-md-0 text-body-secondary">© 2024 College, aitm</span>
+          </div>
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-body-secondary" href="#" ></a><img width="30" src="static/social3.png" alt=""></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="https://www.facebook.com/aitmbgm/"><img  width="30" src="static/social2.png" alt=""></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/angadicollege_belgavi/"><img  width="30" src="static/social1.png" alt=""></use></svg></a></li>
+          </ul>
+        </footer>
+      </div>
+
+
+    {% comment %} adding javascript to make more decorate of my web page {% endcomment %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
